@@ -9,7 +9,7 @@
   .hero__centered-elt__image{
     max-width: 25em;
     //clip-path: circle(70% at 50% 70%);
-    clip-path: url('.hero__centered-svg');
+    clip-path: url('#svgPath');
   }
 
   .hero__centered-elt__title{
