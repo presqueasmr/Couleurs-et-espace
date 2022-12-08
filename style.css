@@ -65,6 +65,34 @@ h3 {
           justify-content: space-between;
           margin-left: 4em; }
 
+h3 {
+  font-size: 3em;
+  margin: 1em 0;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery .gallery__container-title {
+  width: 50%;
+}
+.gallery .gallery__items {
+  border-left: 1px solid #EDEDED;
+  width: 50%;
+}
+.gallery .gallery__items .gallery__items__item {
+  margin-bottom: 4em;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
+  display: flex;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4em;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
