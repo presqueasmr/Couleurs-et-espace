@@ -52,32 +52,26 @@ body {
   color: #EDEDED;
 }
 
-h3 {
-  font-size: 3em;
-  margin: 1em 0;
+h2 {
+  font-size: 4em;
+  margin-left: 1em;
 }
 
-.gallery {
-  display: flex;
+h3 {
+  font-size: 1em;
+  font-family: "proxima-nova";
+  font-weight: bold;
 }
-.gallery .gallery__container-title {
-  width: 50%;
+
+p {
+  font-family: "proxima-nova";
+  font-size: 1em;
 }
-.gallery .gallery__items {
+
+.wrapper {
+  margin: 0 128px;
+  border-right: 1px solid #EDEDED;
   border-left: 1px solid #EDEDED;
-  width: 50%;
-}
-.gallery .gallery__items .gallery__items__item {
-  margin-bottom: 4em;
-}
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
-  display: flex;
-}
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 4em;
 }
 
 .hero {
@@ -149,6 +143,36 @@ h3 {
   height: 14em;
   background-image: url("/Assets/images/Illus-header/Adam_Dieu_Michelangelo(1).jpg");
   background-position: center;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery .gallery__container-title {
+  width: 50%;
+}
+.gallery .gallery__items {
+  border-left: 1px solid #EDEDED;
+  width: 50%;
+}
+.gallery .gallery__items .gallery__items__item {
+  margin-bottom: 4em;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
+  display: flex;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.gallery .gallery__items .gallery__items__item h3 {
+  margin: 2em 2em 1em 1em;
+}
+.gallery .gallery__items .gallery__items__item p {
+  margin: 0 2em 2em 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
