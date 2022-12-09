@@ -1,7 +1,12 @@
 .gallery{
     display: flex;
     .gallery__container-title{
+      position: relative;
         width: 50%;
+        .gallery__container-title__title{
+          position: sticky;
+          top: 20px;
+        }
     }
 
     .gallery__items{
@@ -32,12 +37,12 @@
             p{
                 margin: 0 2em 2em 1em ;
             }
-            
+
         }
 
-        
+
     }
 
-    
+
 
 }

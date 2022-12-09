@@ -161,7 +161,12 @@ p {
   display: flex;
 }
 .gallery .gallery__container-title {
+  position: relative;
   width: 50%;
+}
+.gallery .gallery__container-title .gallery__container-title__title {
+  position: sticky;
+  top: 20px;
 }
 .gallery .gallery__items {
   border-left: 1px solid #EDEDED;
