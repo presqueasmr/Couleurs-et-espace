@@ -81,6 +81,14 @@ p {
   justify-content: center;
   align-items: center;
 }
+.hero .hero__line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #EDEDED;
+}
 .hero .hero__centered-elt {
   position: relative;
 }
@@ -173,6 +181,10 @@ p {
 }
 .gallery .gallery__items .gallery__items__item p {
   margin: 0 2em 2em 1em;
+}
+
+.main-info {
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
