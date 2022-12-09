@@ -3,44 +3,27 @@ body{
     color: $white;
 }
 
+h2{
+    font-size: $h2;
+    margin-left: 1em;
+}
+
 h3{
-    font-size: $h3;
-    margin: 1em 0 ;
+    font-size: $p;
+    font-family: $p-font;
+    font-weight: bold;
+}
+
+p{
+    font-family: $p-font;
+    font-size: $p;
 }
 
 
-.gallery{
-    display: flex;
-    .gallery__container-title{
-        width: 50%;
-    }
-
-    .gallery__items{
-        border-left: 1px solid $white;
-        width: 50%;
-
-        .gallery__items__item{
-                margin-bottom: 4em;
 
 
-            .gallery__items__item__img-filter-container{
-                display: flex;
-
-                .gallery__items__item__img-filter-container__filter-container{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    margin-left: 4em;
-                }
-            }
-
-            
-        }
-
-        
-    }
-
-    
-
+.wrapper{
+    margin: 0 $wrapper;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
 }
-

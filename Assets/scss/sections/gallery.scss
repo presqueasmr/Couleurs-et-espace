@@ -1,0 +1,43 @@
+.gallery{
+    display: flex;
+    .gallery__container-title{
+        width: 50%;
+    }
+
+    .gallery__items{
+        border-left: 1px solid $white;
+        width: 50%;
+
+        .gallery__items__item{
+                margin-bottom: 4em;
+
+
+            .gallery__items__item__img-filter-container{
+                display: flex;
+
+                .gallery__items__item__img-filter-container__filter-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+
+
+            h3{
+                margin: 2em 2em 1em 1em;
+            }
+
+            p{
+                margin: 0 2em 2em 1em ;
+            }
+            
+        }
+
+        
+    }
+
+    
+
+}
