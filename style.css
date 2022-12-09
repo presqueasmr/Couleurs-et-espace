@@ -87,6 +87,9 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+.hero .hero__centered-elt {
+  position: relative;
+}
 .hero .hero__centered-elt .hero__centered-elt__image {
   max-width: 25em;
   border-top-left-radius: 20em;
@@ -102,6 +105,50 @@ h3 {
   text-transform: uppercase;
   line-height: 1.3;
   background-color: #171717;
+}
+.hero .hero__centered-elt .hero__centered-elt__floating-elt .hero__centered-elt__floating-elt__img {
+  border-top-left-radius: 15em;
+  border-top-right-radius: 15em;
+  border-bottom-left-radius: 15em;
+  border-bottom-right-radius: 15em;
+  min-width: 3em;
+  min-height: 4em;
+  background-size: cover;
+}
+.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img1 {
+  position: absolute;
+  top: 0;
+  left: -20em;
+  max-width: 15em;
+  width: 12em;
+  height: 19em;
+  background-image: url("/Assets/images/Illus-header/Portrait_Monet.jpg");
+}
+.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img2 {
+  position: absolute;
+  bottom: -8em;
+  left: -12em;
+  width: 5em;
+  height: 9em;
+  background-image: url("/Assets/images/Illus-header/Sketch.jpg");
+}
+.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img3 {
+  position: absolute;
+  top: -6em;
+  right: -15em;
+  width: 9em;
+  height: 15em;
+  background-image: url("/Assets/images/Illus-header/La_lecture_Manet.jpg");
+  background-position: center;
+}
+.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img4 {
+  position: absolute;
+  bottom: -15em;
+  right: -15em;
+  width: 8em;
+  height: 14em;
+  background-image: url("/Assets/images/Illus-header/Adam_Dieu_Michelangelo(1).jpg");
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
