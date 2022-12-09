@@ -16,33 +16,41 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
   background-color: #171717;
-  color: #EDEDED; }
+  color: #EDEDED;
+}
 
 h2 {
   font-size: 4em;
@@ -62,25 +70,53 @@ p {
   border-right: 1px solid #EDEDED;
   border-left: 1px solid #EDEDED; }
 
+
+.gallery {
+  display: flex;
+}
+.gallery .gallery__container-title {
+  width: 50%;
+}
+.gallery .gallery__items {
+  border-left: 1px solid #EDEDED;
+  width: 50%;
+}
+.gallery .gallery__items .gallery__items__item {
+  margin-bottom: 4em;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
+  display: flex;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4em;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  .hero .hero__centered-elt__image {
-    max-width: 25em;
-    clip-path: url(".hero__centered-svg"); }
-  .hero .hero__centered-elt__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 8em;
-    font-family: "NewYork";
-    text-transform: uppercase;
-    line-height: 1.3;
-    background-color: #171717; }
+  align-items: center;
+}
+.hero .hero__centered-elt .hero__centered-elt__image {
+  max-width: 25em;
+  border-top-left-radius: 20em;
+  border-top-right-radius: 20em;
+}
+.hero .hero__centered-elt .hero__centered-elt__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 8em;
+  font-family: "NewYork";
+  text-transform: uppercase;
+  line-height: 1.3;
+  background-color: #171717;
+}
 
 .gallery {
   display: flex; }
