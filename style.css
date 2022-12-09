@@ -47,6 +47,10 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: NewYork;
+  src: url(/Assets/images/font/NewYork\ PERSONAL\ USE.otf);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -70,6 +74,20 @@ h3 {
 p {
   font-family: "proxima-nova";
   font-size: 1em;
+}
+
+button {
+  position: relative;
+  border: 0;
+  background: none;
+  color: #EDEDED;
+  cursor: pointer;
+}
+button::after {
+  content: url("/Assets/images/sm-ellipse.svg");
+  position: absolute;
+  bottom: -100%;
+  left: 0;
 }
 
 .wrapper {
@@ -111,7 +129,7 @@ p {
   left: 50%;
   transform: translate(-50%);
   font-size: 8em;
-  font-family: "NewYork";
+  font-family: NewYork;
   text-transform: uppercase;
   line-height: 1.3;
   background-color: #171717;
@@ -170,13 +188,21 @@ p {
 }
 .gallery .gallery__container-title .gallery__container-title__title {
   position: sticky;
-  top: 20px;
+  top: 60px;
+  font-family: NewYork;
+}
+.gallery .gallery__container-title .gallery__container-title__title::after {
+  content: url("/Assets/images/min-ellipse.svg");
+  position: absolute;
+  top: -0.5em;
+  left: 1em;
 }
 .gallery .gallery__items {
   border-left: 1px solid #EDEDED;
   width: 50%;
 }
 .gallery .gallery__items .gallery__items__item {
+  font-family: "proxima-nova";
   margin-bottom: 4em;
 }
 .gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
@@ -185,9 +211,18 @@ p {
 .gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
   width: 100%;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container .gallery__items__item__img-filter-container__filter-container__filter {
+  margin: 2em;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container .gallery__items__item__img-filter-container__filter-container__filter:first-child {
+  margin-top: 1em;
+}
+.gallery .gallery__items .gallery__items__item .gallery__items__item__text {
+  width: 80%;
 }
 .gallery .gallery__items .gallery__items__item h3 {
   margin: 2em 2em 1em 1em;

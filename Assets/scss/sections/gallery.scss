@@ -5,7 +5,14 @@
         width: 50%;
         .gallery__container-title__title{
           position: sticky;
-          top: 20px;
+          top: 60px;
+          font-family: $display-font;
+          &::after{
+            content: url('/Assets/images/min-ellipse.svg');
+            position: absolute;
+            top: -0.5em;
+            left: 1em;
+          }
         }
     }
 
@@ -14,6 +21,7 @@
         width: 50%;
 
         .gallery__items__item{
+                font-family: $p-font;
                 margin-bottom: 4em;
 
 
@@ -23,10 +31,21 @@
                 .gallery__items__item__img-filter-container__filter-container{
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
+                    justify-content: start;
+                    align-items: flex-start;
                     width: 100%;
+
+                    .gallery__items__item__img-filter-container__filter-container__filter{
+                      margin: 2em;
+                    }
+                    .gallery__items__item__img-filter-container__filter-container__filter:first-child{
+                      margin-top: 1em;
+                    }
                 }
+            }
+
+            .gallery__items__item__text{
+              width: 80%;
             }
 
 

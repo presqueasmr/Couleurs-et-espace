@@ -4,10 +4,6 @@
 $black : #171717;
 $white : #EDEDED;
 
-/////////////////// COULEURS /////////////////////
-
-$display-font : 'NewYork';
-
 ///////////////MARGIN///////////////////////////
 
 $wrapper: 128px;
@@ -18,5 +14,10 @@ $wrapper: 128px;
 $p: 1em;
 $h2: 4em;
 ///////////////TEXT///////////////////////////
+@font-face {
+  font-family: NewYork;
+  src: url(/Assets/images/font/NewYork\ PERSONAL\ USE.otf);
+}
 
 $p-font: 'proxima-nova';
+$display-font : NewYork;
