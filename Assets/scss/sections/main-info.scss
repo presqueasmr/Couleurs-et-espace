@@ -1,3 +1,28 @@
 .main-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   min-height: 100vh;
+  padding: 20em 0 5em 0;
+  main{
+    position: relative;
+    width: 60%;
+    text-align: center;
+    p{
+      margin: 1em;
+      font-family: $p-font;
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+    .main-info__pattern{
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    #pattern2{
+      transform: translate(-50%) rotate(20deg);
+    }
+  }
 }
