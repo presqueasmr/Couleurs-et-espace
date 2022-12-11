@@ -247,7 +247,7 @@ button::after {
 .main-info main p {
   margin: 1em;
   font-family: "proxima-nova";
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
 }
 .main-info main .main-info__pattern {
