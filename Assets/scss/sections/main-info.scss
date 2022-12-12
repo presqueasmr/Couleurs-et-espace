@@ -26,4 +26,15 @@
       transform: translate(-50%) rotate(20deg);
     }
   }
+  .main-info__scroll-down img{
+    animation: bouncing 1s ease-in-out infinite alternate;
+  }
+  @keyframes bouncing {
+    from{
+      transform: translateY(1.3em);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
 }

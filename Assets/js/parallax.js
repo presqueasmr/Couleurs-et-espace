@@ -5,7 +5,7 @@ let img4 = document.querySelector('#floating-elt__img4');
 window.addEventListener("scroll", function () {
 
   parallax(img1, 0.008);
-  parallax(img2, 0.008);
+  parallax(img2, 0.017);
   parallax(img3, 0.01);
   parallax(img4, 0.007);
 
