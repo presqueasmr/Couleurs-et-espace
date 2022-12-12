@@ -241,7 +241,7 @@ button::after {
 }
 .main-info main {
   position: relative;
-  width: 62%;
+  width: 47em;
   text-align: center;
 }
 .main-info main p {
