@@ -104,63 +104,6 @@ function negatif(){
 
 }
 
-
-function pixelisation(idImg){
-
-  let photo = document.querySelector('#'+idImg);
-
-	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter(photo);
-
-	// TRAITEMENT / APPLICATION D'UN FILTRE
-  prevValue.push(tr[0][0], tg[0][0], tb[0][0], ta[0][0]);
-  for (var y = 0; y < height; y++) {
-    for (var x = 0; x < width; x++) {
-      if(index < 4){
-        tr[x][y] = prevValue[0]
-        tg[x][y] = prevValue[1];
-        tb[x][y] = prevValue[2];
-        ta[x][y] = prevValue[3];
-        index++;
-      }
-      else{
-        index = 0;
-        prevValue = [];
-        prevValue.push(tr[x][y], tg[x][y], tb[x][y], ta[x][y]);
-      }
-    }
-  }
-
-	// MISE À JOUR DE L'IMAGE
-	postfilter(photo);
-
-}
-
-
-function noir_et_blanc(idImg){
-
-	let photo = document.querySelector('#'+idImg);
-  
-	  // CHARGEMENT DES TABLEAUX DE PIXELS
-	  prefilter(photo);
-  
-	  // TRAITEMENT / APPLICATION D'UN FILTRE
-	  for (var y = 0; y < height; y++) { 
-		for (var x = 0; x < width; x++) {
-		
-			var moyenne = tr[x][y]*0.3 + tg[x][y]*0.6 + tb[x][y]*0.1;
-				
-				tr[x][y] = moyenne;
-				tg[x][y] = moyenne;
-				tb[x][y] = moyenne;
-		}
-	}
-  
-	  // MISE À JOUR DE L'IMAGE
-	  postfilter(photo);
-  
-  }
-
   
   function flou(idImg){
 
