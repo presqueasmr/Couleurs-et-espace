@@ -67,12 +67,12 @@ h2 {
 
 h3 {
   font-size: 1em;
-  font-family: "proxima-nova";
+  font-family: "Montserrat";
   font-weight: bold;
 }
 
 p {
-  font-family: "proxima-nova";
+  font-family: "Montserrat";
   font-size: 1em;
 }
 
@@ -154,7 +154,7 @@ button::after {
 }
 .hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img2 {
   position: absolute;
-  bottom: -8em;
+  top: 20em;
   left: -12em;
   width: 5em;
   height: 9em;
@@ -202,7 +202,7 @@ button::after {
   width: 50%;
 }
 .gallery .gallery__items .gallery__items__item {
-  font-family: "proxima-nova";
+  font-family: "Montserrat";
   margin-bottom: 4em;
 }
 .gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
@@ -241,18 +241,18 @@ button::after {
 }
 .main-info main {
   position: relative;
-  width: 60%;
+  width: 62%;
   text-align: center;
 }
 .main-info main p {
   margin: 1em;
-  font-family: "proxima-nova";
-  font-size: 1em;
-  font-weight: 400;
+  font-family: "Montserrat";
+  font-size: "Montserrat";
+  font-weight: 300;
 }
 .main-info main .main-info__pattern {
   position: absolute;
-  top: -50%;
+  top: -40%;
   left: 50%;
   transform: translate(-50%);
 }

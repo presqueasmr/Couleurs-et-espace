@@ -7,17 +7,17 @@
   padding: 20em 0 5em 0;
   main{
     position: relative;
-    width: 60%;
+    width: 62%;
     text-align: center;
     p{
       margin: 1em;
       font-family: $p-font;
-      font-size: 1.25em;
-      font-weight: 400;
+      font-size: $p-font;
+      font-weight: 300;
     }
     .main-info__pattern{
       position: absolute;
-      top: -50%;
+      top: calc((-50%) + 10%);
       left: 50%;
       transform: translate(-50%);
     }
