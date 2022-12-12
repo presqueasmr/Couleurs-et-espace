@@ -19,6 +19,8 @@ var photo, canvas;
 var pix, imgd, context;
 let prevValue =[];
 let index = 0;
+let nbPixelToChange = 4;
+
 
 function prefilter(photo){
 
@@ -113,10 +115,13 @@ function pixelisation(idImg){
 	prefilter(photo);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
+  let prevValue =[];
+  let index = 0;
+  let nbPixelToChange = 4;
   prevValue.push(tr[0][0], tg[0][0], tb[0][0], ta[0][0]);
   for (var y = 0; y < height; y++) {
     for (var x = 0; x < width; x++) {
-      if(index < 4){
+      if(index < nbPixelToChange){
         tr[x][y] = prevValue[0]
         tg[x][y] = prevValue[1];
         tb[x][y] = prevValue[2];
