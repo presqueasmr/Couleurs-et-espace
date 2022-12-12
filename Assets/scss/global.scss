@@ -18,8 +18,8 @@ h3{
 }
 
 p{
-    font-family: $p-font;
-    font-size: $p;
+    font-family: $p-font, 'Times New Roman', Times, serif;
+    font-size: $p, 'Arial', sans-serif;
 }
 
 button{
@@ -33,6 +33,9 @@ button{
     position: absolute;
     bottom: -100%;
     left: 0;
+  }
+  &:hover{
+    transform: rotate(30deg);
   }
 }
 
