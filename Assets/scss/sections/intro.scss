@@ -1,0 +1,19 @@
+.intro{
+  z-index: 80;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // min-height: 100vh;
+  // max-height: 100vh;
+  background-color: $black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .intro__title{
+    font-size: 3em;
+    font-family: $display-font;
+  }
+}

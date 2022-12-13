@@ -276,4 +276,21 @@ button:hover {
   }
 }
 
+.intro {
+  z-index: 80;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .intro__title {
+  font-size: 3em;
+  font-family: NewYork;
+}
+
 /*# sourceMappingURL=style.css.map */

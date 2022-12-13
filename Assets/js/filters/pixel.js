@@ -145,59 +145,59 @@ function pixelisation(idImg){
 function noir_et_blanc(idImg){
 
 	let photo = document.querySelector('#'+idImg);
-  
+
 	  // CHARGEMENT DES TABLEAUX DE PIXELS
 	  prefilter(photo);
-  
+
 	  // TRAITEMENT / APPLICATION D'UN FILTRE
-	  for (var y = 0; y < height; y++) { 
+	  for (var y = 0; y < height; y++) {
 		for (var x = 0; x < width; x++) {
-		
+
 			var moyenne = tr[x][y]*0.3 + tg[x][y]*0.6 + tb[x][y]*0.1;
-				
+
 				tr[x][y] = moyenne;
 				tg[x][y] = moyenne;
 				tb[x][y] = moyenne;
 		}
 	}
-  
+
 	  // MISE À JOUR DE L'IMAGE
 	  postfilter(photo);
-  
+
   }
 
-  
+
   function flou(idImg){
 
 	let photo = document.querySelector('#'+idImg);
-  
+
 	  // CHARGEMENT DES TABLEAUX DE PIXELS
 	  prefilter(photo);
-  
+
 	  // TRAITEMENT / APPLICATION D'UN FILTRE
-	  for (var y = 3; y < height-3; y++) { 
+	  for (var y = 3; y < height-3; y++) {
 		for (var x = 3; x < width-3; x++) {
 
-			var moyenneTr = (6*tr[x][y]+ tr[x-1][y] + tr[x+1][y] + 
+			var moyenneTr = (6*tr[x][y]+ tr[x-1][y] + tr[x+1][y] +
 							tr[x][y-1] +tr[x][y+1] + tr[x-1][y-1] +
 							tr[x+1][y+1] + tr[x+1][y-1] + tr[x-1][y+1] +
-							tr[x-2][y] + tr[x+2][y] + 
-							tr[x][y-2] + tr[x][y+2] + 
-							tr[x-2][y-2] + tr[x+2][y+2] + 
+							tr[x-2][y] + tr[x+2][y] +
+							tr[x][y-2] + tr[x][y+2] +
+							tr[x-2][y-2] + tr[x+2][y+2] +
 							tr[x+2][y-2] + tr[x-2][y+2]) /21;
-			var moyenneTg = (6*tg[x][y]+ tg[x-1][y] + tg[x+1][y] + 
-							tg[x][y-1] +tg[x][y+1] + tg[x-1][y-1] + 
+			var moyenneTg = (6*tg[x][y]+ tg[x-1][y] + tg[x+1][y] +
+							tg[x][y-1] +tg[x][y+1] + tg[x-1][y-1] +
 							tg[x+1][y+1] + tg[x+1][y-1] + tg[x-1][y+1] +
-							tg[x-2][y] + tg[x+2][y] + 
-							tg[x][y-2] +tg[x][y+2] + 
+							tg[x-2][y] + tg[x+2][y] +
+							tg[x][y-2] +tg[x][y+2] +
 							tg[x-2][y-2] + tg[x+2][y+2] +
 							 tg[x+2][y-2] + tg[x-2][y+2]) /21;
-			var moyenneTb = (6*tb[x][y]+ tb[x-1][y] + tb[x+1][y] + 
-							tb[x][y-1] +tb[x][y+1] + tb[x-1][y-1] + 
+			var moyenneTb = (6*tb[x][y]+ tb[x-1][y] + tb[x+1][y] +
+							tb[x][y-1] +tb[x][y+1] + tb[x-1][y-1] +
 							tb[x+1][y+1] + tb[x+1][y-1] + tb[x-1][y+1] +
-							tb[x-2][y] + tb[x+2][y] + 
-							tb[x][y-2] +tb[x][y+2] + 
-							tb[x-2][y-2] + tb[x+2][y+2] + 
+							tb[x-2][y] + tb[x+2][y] +
+							tb[x][y-2] +tb[x][y+2] +
+							tb[x-2][y-2] + tb[x+2][y+2] +
 							tb[x+2][y-2] + tb[x-2][y+2]) /21;
 
 
@@ -206,11 +206,8 @@ function noir_et_blanc(idImg){
 				tb[x][y] = moyenneTb;
 			}
 	}
-  
+
 	  // MISE À JOUR DE L'IMAGE
 	  postfilter(photo);
-  
+
   }
-
-
-  
