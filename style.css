@@ -103,6 +103,11 @@ button:hover {
   display: none;
 }
 
+@media only screen and (max-width: 950px) {
+  .wrapper {
+    margin: 0 2rem;
+  }
+}
 .hero {
   position: relative;
   min-height: 100vh;
@@ -121,12 +126,12 @@ button:hover {
 .hero .hero__centered-elt {
   position: relative;
 }
-.hero .hero__centered-elt .hero__centered-elt__image {
+.hero .hero__centered-elt .hero__image {
   max-width: 25em;
   border-top-left-radius: 20em;
   border-top-right-radius: 20em;
 }
-.hero .hero__centered-elt .hero__centered-elt__title {
+.hero .hero__centered-elt .hero__title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -137,7 +142,7 @@ button:hover {
   line-height: 1.3;
   background-color: #171717;
 }
-.hero .hero__centered-elt .hero__centered-elt__floating-elt .hero__centered-elt__floating-elt__img {
+.hero .hero__centered-elt .hero__floating-elt .hero__floating-img {
   border-top-left-radius: 15em;
   border-top-right-radius: 15em;
   border-bottom-left-radius: 15em;
@@ -146,7 +151,7 @@ button:hover {
   min-height: 4em;
   background-size: cover;
 }
-.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img1 {
+.hero .hero__centered-elt .hero__floating-elt #floating-elt__img1 {
   position: absolute;
   top: 0;
   left: -20em;
@@ -155,7 +160,7 @@ button:hover {
   height: 19em;
   background-image: url("/Assets/images/Illus-header/Portrait_Monet.jpg");
 }
-.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img2 {
+.hero .hero__centered-elt .hero__floating-elt #floating-elt__img2 {
   position: absolute;
   bottom: -8em;
   left: -12em;
@@ -163,7 +168,7 @@ button:hover {
   height: 9em;
   background-image: url("/Assets/images/Illus-header/Sketch.jpg");
 }
-.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img3 {
+.hero .hero__centered-elt .hero__floating-elt #floating-elt__img3 {
   position: absolute;
   top: -6em;
   right: -15em;
@@ -172,7 +177,7 @@ button:hover {
   background-image: url("/Assets/images/Illus-header/La_lecture_Manet.jpg");
   background-position: center;
 }
-.hero .hero__centered-elt .hero__centered-elt__floating-elt #floating-elt__img4 {
+.hero .hero__centered-elt .hero__floating-elt #floating-elt__img4 {
   position: absolute;
   bottom: -15em;
   right: -15em;
@@ -182,19 +187,43 @@ button:hover {
   background-position: center;
 }
 
+@media only screen and (max-width: 950px) {
+  .hero .hero__line {
+    height: 100%;
+  }
+  .hero .hero__centered-elt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .hero__centered-elt .hero__title {
+    font-size: 4rem;
+  }
+  .hero .hero__centered-elt .hero__image {
+    max-width: 100%;
+  }
+  .hero .hero__centered-elt .hero__floating-elt {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 950px) {
+  .hero__title {
+    font-size: 9rem;
+  }
+}
 .gallery {
   display: flex;
 }
 .gallery .gallery__container-title {
   position: relative;
-  width: 50%;
+  flex: 1;
 }
-.gallery .gallery__container-title .gallery__container-title__title {
+.gallery .gallery__container-title .gallery__title {
   position: sticky;
   top: 60px;
   font-family: NewYork;
 }
-.gallery .gallery__container-title .gallery__container-title__title::after {
+.gallery .gallery__container-title .gallery__title::after {
   content: url("/Assets/images/min-ellipse.svg");
   position: absolute;
   top: -0.5em;
@@ -202,39 +231,79 @@ button:hover {
 }
 .gallery .gallery__items {
   border-left: 1px solid #EDEDED;
-  width: 50%;
+  flex: 1;
 }
-.gallery .gallery__items .gallery__items__item {
+.gallery .gallery__items .gallery__item {
   font-family: "Montserrat";
   margin-bottom: 4em;
 }
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container {
+.gallery .gallery__items .gallery__item .gallery__content {
   display: flex;
 }
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
+.gallery .gallery__items .gallery__item .gallery__content .gallery__img {
+  max-width: 31rem;
   width: 100%;
+  height: auto;
 }
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container .gallery__items__item__img-filter-container__filter-container__filter {
+.gallery .gallery__items .gallery__item .gallery__content .gallery__filters .gallery__filter {
   margin: 2em;
 }
-.gallery .gallery__items .gallery__items__item .gallery__items__item__img-filter-container .gallery__items__item__img-filter-container__filter-container .gallery__items__item__img-filter-container__filter-container__filter:first-child {
+.gallery .gallery__items .gallery__item .gallery__content .gallery__filters .gallery__filter:first-child {
   margin-top: 1em;
 }
-.gallery .gallery__items .gallery__items__item .gallery__items__item__text {
+.gallery .gallery__items .gallery__item .gallery__content-description {
   width: 80%;
   line-height: 1.3;
 }
-.gallery .gallery__items .gallery__items__item h3 {
+.gallery .gallery__items .gallery__item h3 {
   margin: 2em 2em 1em 1em;
 }
-.gallery .gallery__items .gallery__items__item p {
+.gallery .gallery__items .gallery__item p {
   margin: 0 2em 2em 1em;
 }
 
+@media only screen and (min-width: 1224px) {
+  .gallery .gallery__content .gallery__filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery .gallery__container-title .gallery__title {
+    position: static;
+    margin: 0 0 3.5rem 0;
+    font-size: 2.5rem;
+  }
+  .gallery .gallery__container-title .gallery__title::after {
+    content: url("/Assets/images/min-ellipse.svg");
+    position: absolute;
+    top: -1em;
+    left: 0.2em;
+    transform: scale(0.8);
+  }
+  .gallery .gallery__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .gallery .gallery__content .gallery__filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
 .main-info {
   display: flex;
   flex-direction: column;
@@ -276,6 +345,24 @@ button:hover {
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .main-info {
+    width: 100%;
+    padding-top: 0;
+  }
+  .main-info main {
+    width: 100%;
+  }
+  .main-info main p {
+    padding: 0 1rem;
+    line-height: 1.5rem;
+    text-align: start;
+    margin: 2rem 0;
+  }
+  .main-info img {
+    display: none;
+  }
+}
 .intro {
   z-index: 80;
   position: fixed;

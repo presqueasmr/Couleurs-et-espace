@@ -16,7 +16,7 @@
   }
   .hero__centered-elt{
     position: relative;
-    .hero__centered-elt__image{
+    .hero__image{
       max-width: 25em;
       border-top-left-radius: 20em;
       border-top-right-radius: 20em;
@@ -24,7 +24,7 @@
       // mask-image: url('./Assets/images/Illus-header/formeHeader.svg');
     }
 
-    .hero__centered-elt__title{
+    .hero__title{
       position: absolute;
       top: 50%;
       left: 50%;
@@ -38,8 +38,8 @@
       background-color: $black;
     }
 
-    .hero__centered-elt__floating-elt{
-      .hero__centered-elt__floating-elt__img{
+    .hero__floating-elt{
+      .hero__floating-img{
         border-top-left-radius: 15em;
         border-top-right-radius: 15em;
         border-bottom-left-radius: 15em;
@@ -92,3 +92,31 @@
     }
   }
 }
+
+@media only screen and (max-width : 950px) {
+  .hero{
+    .hero__line{
+      height: 100%;
+    }
+    .hero__centered-elt{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hero__title{
+        font-size: 4rem;
+      }
+      .hero__image{
+        max-width: 100%;
+      }
+      .hero__floating-elt{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 950px) {
+  .hero__title{
+    font-size: 9rem;
+  }
+  }

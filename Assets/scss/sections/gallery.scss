@@ -2,8 +2,8 @@
     display: flex;
     .gallery__container-title{
       position: relative;
-        width: 50%;
-        .gallery__container-title__title{
+        flex: 1;
+        .gallery__title{
           position: sticky;
           top: 60px;
           font-family: $display-font;
@@ -18,33 +18,30 @@
 
     .gallery__items{
         border-left: 1px solid $white;
-        width: 50%;
+        flex: 1;
 
-        .gallery__items__item{
+        .gallery__item{
                 font-family: $p-font;
                 margin-bottom: 4em;
 
-
-            .gallery__items__item__img-filter-container{
+            .gallery__content{
                 display: flex;
-
-                .gallery__items__item__img-filter-container__filter-container{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: start;
-                    align-items: flex-start;
-                    width: 100%;
-
-                    .gallery__items__item__img-filter-container__filter-container__filter{
+                .gallery__img{
+                  max-width: 31rem;
+                  width: 100%;
+                  height: auto;
+                }
+                .gallery__filters{
+                    .gallery__filter{
                       margin: 2em;
                     }
-                    .gallery__items__item__img-filter-container__filter-container__filter:first-child{
+                    .gallery__filter:first-child{
                       margin-top: 1em;
                     }
                 }
             }
 
-            .gallery__items__item__text{
+            .gallery__content-description{
               width: 80%;
               line-height: 1.3;
             }
@@ -62,7 +59,68 @@
 
 
     }
-
-
-
 }
+
+
+@media only screen and (min-width : 1224px){
+    .gallery{
+      .gallery__content{
+        .gallery__filters{
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: flex-start;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+@media only screen and (max-width : 950px) {
+
+    .gallery{
+      display: flex;
+      flex-direction: column;
+
+      .gallery__container-title{
+          .gallery__title{
+            position: static;
+            margin: 0 0 3.5rem 0;
+            font-size: 2.5rem;
+            &::after{
+              content: url('/Assets/images/min-ellipse.svg');
+              position: absolute;
+              top: -1em;
+              left: 0.2em;
+              transform: scale(.8);
+            }
+          }
+      }
+
+
+      .gallery__content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .gallery__filters{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          width: 100%;
+          margin-top: 2rem;
+          // .gallery__filter{
+          //   flex: 1;
+          // }
+          // .gallery__filter:first-child{
+          //   justify-self: end;
+          // }
+          // .gallery__filter:last-child{
+          //   justify-self: start;
+          // }
+        }
+      }
+    }
+  }
